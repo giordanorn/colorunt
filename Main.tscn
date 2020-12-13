@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PaintRed.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/BarrierBlue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/BarrierRed.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/BarrierPurple.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -24,6 +25,7 @@ transform = Transform( 0.912988, 0.158146, -0.37609, 0.0318916, 0.891333, 0.4522
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
@@ -35,22 +37,32 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="PaintRed" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.354, -6.744, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, -1 )
 
 [node name="PaintBlue" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.157, 6.948, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -10, -1 )
 
 [node name="PaintPurple" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.642, 6.578, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -1 )
 
 [node name="BarrierBlue" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378528, -6.97277, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1 )
 
 [node name="BarrierRed" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.888, -6.462, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1 )
 
 [node name="BarrierPurple" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.206, -5.489, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1 )
+
+[node name="BarrierPurple2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="BarrierRed2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1 )
+
+[node name="Exit" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -1 )
+color = Color( 0.243137, 0.901961, 0.823529, 1 )
 
 [node name="Wall" type="RigidBody" parent="."]
 mode = 1

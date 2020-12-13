@@ -4,8 +4,10 @@ extends KinematicBody
 export var speed:int = 1
 
 var direction = Vector3.ZERO
+var initial_position
 
 func _ready():
+	initial_position=translation
 	#$MeshInstance.get_surface_material(0).albedo_color = Color(1,0,1)
 	pass
 
