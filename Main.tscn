@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PaintRed.tscn" type="PackedScene" id=2]
@@ -12,6 +12,9 @@
 [sub_resource type="PlaneMesh" id=1]
 
 [sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.109804, 0.109804, 0.109804, 1 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
@@ -55,53 +58,53 @@ mode = 1
 [node name="MeshInstance" type="MeshInstance" parent="Wall"]
 transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, -15, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="Wall"]
 transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, 15, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="Wall"]
 transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance4" type="MeshInstance" parent="Wall"]
 transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance5" type="MeshInstance" parent="Wall"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance6" type="MeshInstance" parent="Wall"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance7" type="MeshInstance" parent="Wall"]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance8" type="MeshInstance" parent="Wall"]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance9" type="MeshInstance" parent="Wall"]
-transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, -6, 7, 0 )
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, -5, 7, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance10" type="MeshInstance" parent="Wall"]
-transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, 7, 7, 0 )
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, 5, 7, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="Wall"]
 depth = 0.0
-polygon = PoolVector2Array( 0, -10, 10, -10, 10, 10, -10, 10, -10, -10, 0, -10, 0, -9, -9, -9, -9, 2, -7, 2, -7, 4, -9, 4, -9, 9, -3, 9, -3, 4, -4, 4, -4, 2, -1, 2, -1, 4, -2, 4, -2, 9, 3, 9, 3, 4, 1, 4, 1, 2, 5, 2, 5, 4, 4, 4, 4, 9, 9, 9, 9, 4, 7, 4, 7, 2, 9, 2, 9, -9, 0, -9 )
+polygon = PoolVector2Array( 0, -16, 16, -16, 16, 16, -16, 16, -16, -16, 0, -16, 0, -14, -14, -14, -14, -1, -12, -1, -12, 1, -14, 1, -14, 14, -6, 14, -6, 1, -8, 1, -8, -1, -2, -1, -2, 1, -4, 1, -4, 14, 4, 14, 4, 1, 2, 1, 2, -1, 8, -1, 8, 1, 6, 1, 6, 14, 14, 14, 14, 1, 12, 1, 12, -1, 14, -1, 14, -14, 0, -14 )
