@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PaintRed.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Main.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/PaintBlue.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/PaintPurple.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/BarrierBlue.tscn" type="PackedScene" id=6]
@@ -18,7 +17,6 @@
 albedo_color = Color( 0.109804, 0.109804, 0.109804, 1 )
 
 [node name="Main" type="Spatial"]
-script = ExtResource( 3 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.912988, 0.158146, -0.37609, 0.0318916, 0.891333, 0.452226, 0.406739, -0.424871, 0.808732, -5.71976, 4.05719, 14.7818 )

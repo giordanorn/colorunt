@@ -26,4 +26,3 @@ func _process(delta) -> void:
 	
 	var velocity = ((speed * delta) * direction)
 	move_and_collide(velocity)
-
