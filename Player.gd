@@ -22,7 +22,5 @@ func _process(delta) -> void:
 	else:
 		direction = Vector3.ZERO
 	
-	move(delta)
-
-func move(delta) -> void:
 	translation = ((speed * delta) * direction) + translation
+

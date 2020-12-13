@@ -46,3 +46,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.888, -6.462, -1 )
 
 [node name="BarrierPurple" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.206, -5.489, -1 )
+
+[node name="Wall" type="RigidBody" parent="."]
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Wall"]
+depth = 10.0
+polygon = PoolVector2Array( 0, -10, 10, -10, 10, 10, -10, 10, -10, -10, 0, -10, 0, -9, -9, -9, -9, 2, -7, 2, -7, 4, -9, 4, -9, 9, -3, 9, -3, 4, -4, 4, -4, 2, -1, 2, -1, 4, -2, 4, -2, 9, 3, 9, 3, 4, 1, 4, 1, 2, 5, 2, 5, 4, 4, 4, 4, 9, 9, 9, 9, 4, 7, 4, 7, 2, 9, 2, 9, -9, 0, -9 )
