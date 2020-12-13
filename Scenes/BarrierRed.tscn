@@ -9,6 +9,7 @@ extents = Vector3( 1, 1, 0.5 )
 size = Vector3( 2, 2, 0.5 )
 
 [sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0, 0, 1 )
 
 [node name="BarrierRed" type="Area"]
 script = ExtResource( 1 )

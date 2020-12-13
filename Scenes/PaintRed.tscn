@@ -9,15 +9,20 @@ extents = Vector3( 1, 1, 0.5 )
 size = Vector3( 2, 2, 0.5 )
 
 [sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0, 0, 1 )
+metallic = 1.0
+roughness = 0.0
 
 [node name="PaintRed" type="Area"]
 script = ExtResource( 1 )
 color = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Paint_body_entered"]
