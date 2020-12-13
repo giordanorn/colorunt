@@ -1,10 +1,12 @@
-extends RigidBody
+extends KinematicBody
 
 
 export var speed:int = 1
 
 var direction = Vector3.ZERO
 
+func _ready():
+	$MeshInstance.get_surface_material(0).albedo_color = Color(1,0,1)
 
 func _process(delta) -> void:
 	if Input.is_action_pressed("ui_up"):

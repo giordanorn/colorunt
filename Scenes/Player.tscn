@@ -6,9 +6,9 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=3]
 
-[node name="Player" type="RigidBody"]
+[node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
 speed = 10
 
@@ -17,4 +17,4 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
-material/0 = SubResource( 4 )
+material/0 = SubResource( 3 )
