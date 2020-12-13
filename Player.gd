@@ -7,10 +7,12 @@ var initial_position
 var direction:Vector3 = Vector3.ZERO
 
 const DISTANCE:float = 2.0
+
 var distance_remaining = DISTANCE
 var pos:Vector3
 
 var moving:bool = false
+
 
 func _ready():
 	initial_position = translation
@@ -40,21 +42,23 @@ func set_move_direction() -> bool:
 	return direction != Vector3.ZERO
 
 
-
-
 func move(delta) -> void:
 	var velocity = ((speed * delta) * direction)
 	move_and_collide(velocity)
 	
 	if direction == Vector3.RIGHT:
 		if (translation - pos).x >= DISTANCE:
+			translation.x = floor(translation.x)
 			moving = false
 	if direction == Vector3.LEFT:
 		if (pos - translation).x >= DISTANCE:
+			translation.x = ceil(translation.x)
 			moving = false
 	if direction == Vector3.UP:
 		if (translation - pos).y >= DISTANCE:
+			translation.y = floor(translation.y)
 			moving = false
 	if direction == Vector3.DOWN:
 		if (pos - translation).y >= DISTANCE:
+			translation.y = ceil(translation.y)
 			moving = false

@@ -23,7 +23,7 @@ transform = Transform( 0.912988, 0.158146, -0.37609, 0.0318916, 0.891333, 0.4522
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
@@ -38,13 +38,13 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="PaintRed" parent="Map" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 9, -1 )
 
 [node name="PaintBlue" parent="Map" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -10, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -9, -1 )
 
 [node name="PaintPurple" parent="Map" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 9, -1 )
 
 [node name="BarrierBlue" parent="Map" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1 )
@@ -62,7 +62,7 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1 )
 
 [node name="Exit" parent="Map" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -1 )
 color = Color( 0.243137, 0.901961, 0.823529, 1 )
 
 [node name="Wall" type="RigidBody" parent="Map"]
