@@ -22,5 +22,6 @@ func _process(delta) -> void:
 	else:
 		direction = Vector3.ZERO
 	
-	translation = ((speed * delta) * direction) + translation
+	var velocity = ((speed * delta) * direction)
+	move_and_collide(velocity)
 
