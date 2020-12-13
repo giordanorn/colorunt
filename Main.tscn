@@ -29,92 +29,95 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
 current = true
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Map" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 0 )
+
+[node name="Background" type="MeshInstance" parent="Map"]
 transform = Transform( 4.2469e-13, 1.62921e-07, 16, 16, -1.62921e-07, 8.37727e-19, 2.60673e-06, 1, -2.60673e-06, 0, 0, -1 )
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="PaintRed" parent="." instance=ExtResource( 2 )]
+[node name="PaintRed" parent="Map" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, -1 )
 
-[node name="PaintBlue" parent="." instance=ExtResource( 4 )]
+[node name="PaintBlue" parent="Map" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -10, -1 )
 
-[node name="PaintPurple" parent="." instance=ExtResource( 5 )]
+[node name="PaintPurple" parent="Map" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -1 )
 
-[node name="BarrierBlue" parent="." instance=ExtResource( 6 )]
+[node name="BarrierBlue" parent="Map" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1 )
 
-[node name="BarrierRed" parent="." instance=ExtResource( 7 )]
+[node name="BarrierRed" parent="Map" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1 )
 
-[node name="BarrierPurple" parent="." instance=ExtResource( 8 )]
+[node name="BarrierPurple" parent="Map" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1 )
 
-[node name="BarrierPurple2" parent="." instance=ExtResource( 8 )]
+[node name="BarrierPurple2" parent="Map" instance=ExtResource( 8 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="BarrierRed2" parent="." instance=ExtResource( 7 )]
+[node name="BarrierRed2" parent="Map" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1 )
 
-[node name="Exit" parent="." instance=ExtResource( 9 )]
+[node name="Exit" parent="Map" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -1 )
 color = Color( 0.243137, 0.901961, 0.823529, 1 )
 
-[node name="Wall" type="RigidBody" parent="."]
+[node name="Wall" type="RigidBody" parent="Map"]
 mode = 1
 
-[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, -15, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance2" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, 15, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance3" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance3" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance4" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance4" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance5" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance5" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance6" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance6" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance7" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance7" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance8" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance8" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance9" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance9" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, -5, 7, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance10" type="MeshInstance" parent="Wall"]
+[node name="MeshInstance10" type="MeshInstance" parent="Map/Wall"]
 transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, 5, 7, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="Wall"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Map/Wall"]
 depth = 0.0
 polygon = PoolVector2Array( 0, -16, 16, -16, 16, 16, -16, 16, -16, -16, 0, -16, 0, -14, -14, -14, -14, -1, -12, -1, -12, 1, -14, 1, -14, 14, -6, 14, -6, 1, -8, 1, -8, -1, -2, -1, -2, 1, -4, 1, -4, 14, 4, 14, 4, 1, 2, 1, 2, -1, 8, -1, 8, 1, 6, 1, 6, 14, 14, 14, 14, 1, 12, 1, 12, -1, 14, -1, 14, -14, 0, -14 )
