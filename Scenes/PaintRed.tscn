@@ -10,8 +10,9 @@ size = Vector3( 2, 2, 0.5 )
 
 [sub_resource type="SpatialMaterial" id=3]
 
-[node name="Paint" type="Area"]
+[node name="PaintRed" type="Area"]
 script = ExtResource( 1 )
+color = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )

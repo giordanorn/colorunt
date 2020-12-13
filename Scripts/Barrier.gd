@@ -20,5 +20,6 @@ func _ready():
 func _on_Paint_body_entered(body):
 	if body.is_in_group("player"):
 		if !body.get_node("MeshInstance").get_surface_material(0).albedo_color == $MeshInstance.get_surface_material(0).albedo_color:
-			body.get_node("MeshInstance").get_surface_material(0).albedo_color = $MeshInstance.get_surface_material(0).albedo_color
+			body.get_node("MeshInstance").get_surface_material(0).albedo_color = Color(1,1,1)
+			body.translation = Vector3(0,0,0)
 	pass # Replace with function body.

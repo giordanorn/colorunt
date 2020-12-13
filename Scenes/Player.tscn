@@ -8,7 +8,9 @@
 
 [sub_resource type="SpatialMaterial" id=3]
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"player",
+]]
 script = ExtResource( 1 )
 speed = 10
 
