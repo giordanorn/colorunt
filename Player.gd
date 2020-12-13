@@ -29,13 +29,13 @@ func _process(delta) -> void:
 func set_move_direction() -> bool:
 	direction = Vector3.ZERO
 	if Input.is_action_pressed("ui_up"):
-		direction += Vector3.UP
+		direction = Vector3.UP
 	if Input.is_action_pressed("ui_left"):
-		direction += Vector3.LEFT
+		direction = Vector3.LEFT
 	if Input.is_action_pressed("ui_right"):
-		direction += Vector3.RIGHT
+		direction = Vector3.RIGHT
 	if Input.is_action_pressed("ui_down"):
-		direction += Vector3.DOWN
+		direction = Vector3.DOWN
 	
 	return direction != Vector3.ZERO
 
@@ -46,5 +46,15 @@ func move(delta) -> void:
 	var velocity = ((speed * delta) * direction)
 	move_and_collide(velocity)
 	
-	if (translation.x - pos.x >= DISTANCE):
-		moving = false
+	if direction == Vector3.RIGHT:
+		if (translation - pos).x >= DISTANCE:
+			moving = false
+	if direction == Vector3.LEFT:
+		if (pos - translation).x >= DISTANCE:
+			moving = false
+	if direction == Vector3.UP:
+		if (translation - pos).y >= DISTANCE:
+			moving = false
+	if direction == Vector3.DOWN:
+		if (pos - translation).y >= DISTANCE:
+			moving = false
