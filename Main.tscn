@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PaintRed.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Scenes/BarrierPurple.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
@@ -25,7 +27,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
 current = true
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 2.65432e-13, 1.62921e-07, 10, 10, -1.62921e-07, 0, 1.62921e-06, 1, -1.62921e-06, 0, 0, -1 )
+transform = Transform( 4.2469e-13, 1.62921e-07, 16, 16, -1.62921e-07, 8.37727e-19, 2.60673e-06, 1, -2.60673e-06, 0, 0, -1 )
 mesh = SubResource( 1 )
 material/0 = null
 
@@ -49,6 +51,56 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.206, -5.489, -1 )
 
 [node name="Wall" type="RigidBody" parent="."]
 mode = 1
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, -15, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 16, 0, 0, 0, 1, 15, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="Wall"]
+transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Wall"]
+transform = Transform( 16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="Wall"]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="Wall"]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="Wall"]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="Wall"]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, -6, 7, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, 7, 7, 0 )
+mesh = SubResource( 2 )
+material/0 = null
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="Wall"]
 depth = 0.0
