@@ -11,4 +11,5 @@ func _on_Paint_body_entered(body):
 		if !body.get_node("MeshInstance").get_surface_material(0).albedo_color == $MeshInstance.get_surface_material(0).albedo_color:
 			body.get_node("MeshInstance").get_surface_material(0).albedo_color = Color(0.6,0.6,0.6)
 			body.translation = body.initial_position
+			body.moving=false
 	pass # Replace with function body.
